@@ -6,7 +6,7 @@ import { CheckoutPage } from '../pages/CheckoutPage';
 import { ConfirmationPage } from '../pages/ConfirmationPage';
 
 const CREDENTIALS = { username: 'standard_user', password: 'secret_sauce' };
-const CONTACT_INFO = { firstName: 'Jane', lastName: 'Doe', postalCode: '10001' };
+const CONTACT_INFO = { firstName: 'Zus', lastName: 'Picious', postalCode: '122019' };
 
 test.describe('Saucedemo purchase flow', () => {
   test('should log in successfully and land on inventory page', async ({ page }) => {
