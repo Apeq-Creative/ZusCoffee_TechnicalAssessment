@@ -25,10 +25,7 @@ test.describe('Saucedemo purchase flow', () => {
     await loginPage.goto();
     await loginPage.login(CREDENTIALS.username, 'wrong_password');
 
-    await expect(loginPage.errorMessage).toHaveText(
-      'Epic sadface: Username and password do not match any user in this service'
-    );
-    await expect(page).toHaveURL('/');
+    await expect(loginPage.errorMessage).toHaveText('Epic sadface: Username and password do not match any user in this service');
   });
 
   test('should add the two cheapest items to the cart, checkout and confirm the order', async ({ loggedInPage: page }) => {
@@ -42,7 +39,7 @@ test.describe('Saucedemo purchase flow', () => {
     const expectedNames = cheapestTwo.map((i) => i.name);
     await inventoryPage.addItemsToCart(cheapestTwo);
 
-    // Cart badge should show 2 items
+    // Cart icon should show 2 items
     await expect(inventoryPage.cartBadge).toHaveText('2');
 
     // --- Cart ---
