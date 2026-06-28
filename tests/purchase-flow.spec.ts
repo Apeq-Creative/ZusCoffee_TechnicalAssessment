@@ -39,7 +39,7 @@ test.describe('Saucedemo purchase flow', () => {
     const expectedNames = cheapestTwo.map((i) => i.name);
     await inventoryPage.addItemsToCart(cheapestTwo);
 
-    // Cart icon should show 2 items
+    // Cart badge should show 2 items
     await expect(inventoryPage.cartBadge).toHaveText('2');
 
     // --- Cart ---
